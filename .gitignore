@@ -1,0 +1,10 @@
+.gradle
+build/
+
+### Vaadin ###
+/src/main/frontend/
+
+### VS Code ###
+.vscode/
+
+
