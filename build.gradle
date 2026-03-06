@@ -11,7 +11,7 @@ description = 'Demo Application'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(25)
 	}
 }
 
@@ -21,6 +21,7 @@ repositories {
 
 dependencies {
 	implementation 'com.vaadin:vaadin-spring-boot-starter'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.2'
 	developmentOnly 'com.vaadin:vaadin-dev'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	
@@ -32,4 +33,3 @@ dependencyManagement {
 		mavenBom "com.vaadin:vaadin-bom:25.0.6"
 	}
 }
-

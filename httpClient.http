@@ -1,0 +1,15 @@
+GET http://localhost:8080/api/contacts
+
+###
+POST http://localhost:8080/api/contacts
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "John Doe",
+    "birthdate": "2026-03-31",
+    "company": "Sample Ltd."
+  }
+
+  ###
+

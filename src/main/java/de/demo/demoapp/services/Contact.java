@@ -5,7 +5,6 @@ import java.time.LocalDate;
 public class Contact {
 
     private Long id;
-   
     private String name;
     private LocalDate birthdate;
     private String company;
@@ -19,9 +18,9 @@ public class Contact {
         this.company = company;
     }
 
-    Contact(Long id, String name, LocalDate birthdate, String company){
+    Contact(Long id, String name, LocalDate birthdate, String company) {
         this(name, birthdate, company);
-        this.id=id;
+        this.id = id;
     }
 
     public Long getId() {
