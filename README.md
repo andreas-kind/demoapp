@@ -15,3 +15,15 @@
 - Vscode starten
 	- File >> Open Folder... >> demoapp
 	- Bottom left corner >> Button "><" >> Reopen in Container
+
+# Open the Demo
+## Vaadin Apps
+- Demo1 (Vaadin view with minimum configuration)
+	- URL: http://localhost:8080/demo1/simpleView
+- Demo2 (Demo App with dynamic Menu, List, Dialog and Form with Validation)
+	- URL: http://localhost:8080/demo2/HomeView
+## REST-API 
+- Swagger-UI (Swagger documentation wirh zero configuraten)
+	- URL: http://localhost:8080/swagger-ui/index.html
+- API (DEmo API with minimum configuration)
+	- URL: http://localhost:8080/api/contacts
