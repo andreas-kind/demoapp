@@ -9,6 +9,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
 
 @SpringBootApplication
 @StyleSheet(Lumo.STYLESHEET)
+@StyleSheet("styles.css")
 public class DemoApplication implements AppShellConfigurator {
 
     public static void main(String[] args) {
