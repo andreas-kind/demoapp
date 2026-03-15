@@ -1,4 +1,4 @@
-package de.demo.demoapp.demo2.views;
+package de.demo.demoapp.demo2.frontend.views;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -8,15 +8,17 @@ import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.Route;
 
-import de.demo.demoapp.demo2.forms.EditContactDialog;
+import de.demo.demoapp.demo2.frontend.Demo2Styles;
+import de.demo.demoapp.demo2.frontend.forms.EditContactDialog;
 import de.demo.demoapp.services.Contact;
+import de.demo.demoapp.services.ContactCategotyService;
 import de.demo.demoapp.services.ContactService;
 
 @Route("/demo2/StyledContactsView")
 @Menu(title = "Styled Contacts", icon = "vaadin:list", order = 3)
 public class StyledContactsView extends VerticalLayout {
 
-    public StyledContactsView(ContactService contactService) {
+    public StyledContactsView(ContactService contactService, ContactCategotyService contactCategotyService) {
         this.setSizeFull();
         this.add(new H1("Styled Contacts"));
 
@@ -24,11 +26,11 @@ public class StyledContactsView extends VerticalLayout {
         grid.addColumn(Contact::getId).setHeader("ID").setSortable(true);
         grid.addColumn(Contact::getName).setHeader("Name").setSortable(true);
                         
-        //cell styling
+        //cell styling - sledgehammer approach
         grid.addColumn(Contact::getBirthdate).setHeader("Birthdate")
-                .setPartNameGenerator(contact -> {
+                .setPartNameGenerator(contact -> { //CSS part() selector
                     if (contact.getBirthdate().getYear() >= 2000)
-                        return "very-young-customers-cell";
+                        return Demo2Styles.VERRY_YOUNG_CONTACTS_CELL;
                     return null;
                 });
 
@@ -45,11 +47,14 @@ public class StyledContactsView extends VerticalLayout {
         
         //row styling
         grid.setPartNameGenerator(contact -> {
-            if (contact.getBirthdate().getYear() <= 1970)
-                return "old-customers-row";
-            if (contact.getBirthdate().getYear() > 1990)
-                return "young-customers-row";
-            return null;
+            switch (contactCategotyService.getContactCategory(contact)) {
+                case YOUNG:
+                    return Demo2Styles.YOUNG_CONTACTS_ROW;
+                case OLD:
+                    return Demo2Styles.OLD_CONTACTS_ROW;
+                default:
+                    return null;
+            }
         });
 
         grid.setItems(contactService.getContacts());
