@@ -4,13 +4,14 @@
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
-			"installGradle": "true"
+			"installMaven": "true"
 		}
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"humao.rest-client"
+				"humao.rest-client",
+				"redhat.vscode-xml"
 			]
 		}
 	}

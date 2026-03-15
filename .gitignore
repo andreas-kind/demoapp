@@ -1,6 +1,5 @@
-### Gradle ###
-.gradle
-build/
+### Maven ###
+target/
 
 ### Vaadin ###
 src/main/frontend/generated/
