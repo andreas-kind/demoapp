@@ -3,7 +3,17 @@
 build/
 
 ### Vaadin ###
-/src/main/frontend/
+src/main/frontend/generated/
+src/main/frontend/index.html
+# For Vaadin Custom-Components
+package-lock.json
+package.json
+tsconfig.json
+types.d.ts
+vite.config.ts
+vite.generated.ts
+src/main/bundles/
+node_modules/
 
 ### VS Code ###
 .vscode/
