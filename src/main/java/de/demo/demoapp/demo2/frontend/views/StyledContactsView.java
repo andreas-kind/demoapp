@@ -23,6 +23,7 @@ public class StyledContactsView extends VerticalLayout {
         this.add(new H1("Styled Contacts"));
 
         Grid<Contact> grid = new Grid<>(Contact.class, false);
+        grid.setSelectionMode(Grid.SelectionMode.NONE);
         grid.addColumn(Contact::getId).setHeader("ID").setSortable(true);
         grid.addColumn(Contact::getName).setHeader("Name").setSortable(true);
                         
