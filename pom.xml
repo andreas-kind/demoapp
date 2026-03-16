@@ -13,14 +13,12 @@
         <java.version>25</java.version>
         <vaadin.version>25.0.7</vaadin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- <maven.compiler.release>${java.version}</maven.compiler.release> -->
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>4.0.3</version>
-        <!--<relativePath />-->
     </parent>
 
     <dependencyManagement>
@@ -92,14 +90,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <release>${java.version}</release>
-                </configuration>
-            </plugin> -->
         </plugins>
     </build>
 </project>
