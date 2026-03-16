@@ -15,7 +15,7 @@ import de.demo.demoapp.services.ContactCategotyService;
 import de.demo.demoapp.services.ContactService;
 
 @Route("/demo2/StyledContactsView")
-@Menu(title = "Styled Contacts", icon = "vaadin:list", order = 3)
+@Menu(title = "Styled Contacts", icon = "vaadin:list", order = 4)
 public class StyledContactsView extends VerticalLayout {
 
     public StyledContactsView(ContactService contactService, ContactCategotyService contactCategotyService) {

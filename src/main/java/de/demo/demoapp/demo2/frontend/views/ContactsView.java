@@ -13,7 +13,7 @@ import de.demo.demoapp.services.Contact;
 import de.demo.demoapp.services.ContactService;
 
 @Route("/demo2/ContactsView")
-@Menu(title = "Contacts", icon = "vaadin:list", order = 2)
+@Menu(title = "Contacts", icon = "vaadin:list", order = 3)
 public class ContactsView extends VerticalLayout {
 
     public ContactsView(ContactService contactService) {
