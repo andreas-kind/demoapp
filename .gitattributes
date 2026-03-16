@@ -1,1 +1,2 @@
-*.jar binary
+*       text=auto
+*.jar   binary
